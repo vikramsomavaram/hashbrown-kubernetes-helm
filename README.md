@@ -114,7 +114,7 @@ $ echo -n "<ENCODED USERNAME FROM THE SECRET>" | base64 --decode
 ## Improvements
 
 - Cert-manager can be used on the platform to auto-generate SSL certs and use HTTPS for accessing the application.
-- For production level architecture, Multiple replicas can be used for the web app as well as the DB inorder to maintain high-availability of the application and prevent lose of data.
+- For production level architecture, Multiple replicas can be used for the web app as well as the DB inorder to maintain high-availability of the application and prevent lose of data. (Reference to it is given in the Architecture diagram attached)
 - HPA can be configured with multiple metrics(CPU/Memory/RPS) to autoscale the application based on the traffic that hits the application.
 - Monitoring can be improved with multiple graphs for the indepth analysis of the cluster and the application
 - Alert manager can be configured for creating alerts on the cluster when ever there is anything wrong in the application which will trigger notifications via email/slack or any other notification channels.
