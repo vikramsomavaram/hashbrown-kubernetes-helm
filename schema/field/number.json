@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "NumberEditor",
+    "customIcon": "sort-numeric-asc",
+    "name": "Number"
+}

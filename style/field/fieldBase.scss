@@ -1,0 +1,118 @@
+.field {
+    position: relative;
+
+    &:not(:last-child) {
+        padding-bottom: var(--padding-medium);
+        
+        &.separator {
+            margin-bottom: var(--padding-medium);
+            border-bottom: 1px solid var(--color-default-200);
+        }
+    }
+
+    &.loading {
+        @include spinner;
+
+        min-height: var(--size-widget-small);
+
+        &::before, &::after {
+            margin-top: -var(--padding-medium);
+        }
+    }
+
+    &.fullscreen {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-default-100);
+        padding: var(--padding-large);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tools {
+        margin-right: var(--padding-medium);
+        padding-right: var(--padding-medium);
+        border-right: 1px solid var(--color-default-200); 
+        min-width: calc(var(--size-widget-small) + var(--padding-medium));
+        flex-shrink: 0;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__tool {
+        &:not(:last-child) {
+            margin: 0 0 var(--padding-medium) 0;
+        }
+    }
+
+    &__key {
+        line-height: var(--size-widget-small);
+        margin-bottom: var(--padding-medium);
+        overflow: hidden;
+
+        &__label {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+
+            &__icon {
+                margin-left: var(--padding-small);
+                color: var(--color-default-300);
+            }
+        }
+
+        &__description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--color-default-400);
+            line-height: 1.5;
+        }
+    }
+
+    .small &__key {
+        flex-basis: 8rem;
+        margin-right: var(--padding-large);
+        margin-bottom: 0;
+    }
+
+    &__content {
+        display: flex;
+    }
+    
+    &.fullscreen &__content {
+        flex-grow: 1;
+    }
+
+    &__value {
+        flex-grow: 1;
+        position: relative;
+
+        > .widget, >.widget-group {
+            max-width: var(--max-width-field-value);
+
+            & + .widget,
+            & + .widget-group {
+                margin-top: var(--padding-small);
+            }
+        }
+
+        &__label {
+            line-height: var(--size-widget-small);
+            position: absolute;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+
+            &__icon {
+                margin-right: var(--padding-small);
+            }
+        }
+    }
+}

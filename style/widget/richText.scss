@@ -1,0 +1,84 @@
+@import '../../node_modules/codemirror/lib/codemirror';
+
+.widget--rich-text {
+    background-color: var(--color-default-200);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__toolbar {
+        margin-bottom: var(--padding-small);
+        display: flex;
+
+        .widget--popup {
+            max-width: 14rem;
+            
+            &__value:not(:hover) {
+                border-color: var(--color-default-300);
+            }
+
+            &__option {
+                &::after {
+                    font-size: 1rem;
+                    line-height: inherit !important;
+                }
+            }
+        }
+    }
+    
+    &__view {
+        display: flex;
+    }
+
+    &__editor {
+        background-color: var(--color-default);
+        color: var(--color-default-text);
+        overflow: auto;
+        border-radius: var(--border-radius-small);
+        resize: none;
+        border: 1px solid var(--color-default-300);
+        flex-grow: 1;
+        width: 100%;
+        white-space: pre-wrap;
+
+        .ProseMirror {
+            padding: 1rem;
+            outline: none !important;
+
+            *:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .CodeMirror {
+            height: 100%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        a {
+            cursor: text;
+        }
+
+        *[src] {
+            max-width: 30rem;
+            max-height: 30rem;
+        }
+
+        blockquote {
+            position: relative;
+            padding: 1rem;
+            border: 1px solid var(--color-default-300);
+            background-color: var(--color-default-200);
+
+            *:first-child { margin-top: 0; }
+            *:last-child { margin-bottom: 0; }
+        }
+    }
+
+    &__output {
+        display: none;
+    }
+}

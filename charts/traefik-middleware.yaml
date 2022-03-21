@@ -1,0 +1,13 @@
+---
+# Middleware
+# Strip prefix /overview
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: mw-admin
+  namespace: hashbrown
+spec:
+  stripPrefix:
+    forceSlash: false
+    prefixes:
+      - /random

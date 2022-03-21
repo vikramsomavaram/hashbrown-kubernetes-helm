@@ -1,0 +1,26 @@
+apiVersion: v2
+name: monitoring
+description: A Helm chart for Monitoring stack
+
+maintainers: 
+  - name: Vikram Somavaram
+    email: vikramsomavaram@gmail.com
+
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+dependencies:
+  - name: grafana
+    version: 6.24.1
+    condition: grafana.enabled
+    repository: https://grafana.github.io/helm-charts
+  - name: loki-stack
+    version: 2.6.1
+    condition: loki-stack.enabled
+    repository: https://grafana.github.io/helm-charts
+  - name: prometheus
+    version: 15.5.3
+    condition: prometheus.enabled
+    repository: https://prometheus-community.github.io/helm-charts
+

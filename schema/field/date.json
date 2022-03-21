@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "DateEditor",
+    "customIcon": "calendar",
+    "name": "Date"
+}

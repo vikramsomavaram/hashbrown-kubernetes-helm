@@ -1,0 +1,16 @@
+{
+    "customIcon": "cubes",
+    "allowedAtRoot": false,
+    "name": "Content",
+    "tabs": {
+        "content": "Content"
+    },
+    "defaultTabId": "content",
+    "config": {
+        "title": {
+            "label": "Title",
+            "schemaId": "string",
+            "tabId": "content"
+        }
+    }
+}

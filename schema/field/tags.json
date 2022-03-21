@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "TagsEditor",
+    "customIcon": "tag",
+    "name": "Tags"
+}

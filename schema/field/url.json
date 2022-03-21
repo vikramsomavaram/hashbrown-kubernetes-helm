@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "UrlEditor",
+    "customIcon": "link",
+    "name": "Url"
+}

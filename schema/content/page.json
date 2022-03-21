@@ -1,0 +1,19 @@
+{
+    "customIcon": "file",
+    "name": "Page",
+    "parentId": "contentBase",
+    "allowedAtRoot": false,
+    "defaultTabId": "content",
+    "config": {
+        "description": {
+            "label": "Description",
+            "schemaId": "string",
+            "tabId": "content"
+        },
+        "url": {
+            "label": "URL",
+            "schemaId": "url",
+            "tabId": "content"
+        }
+    }
+}

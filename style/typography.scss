@@ -1,0 +1,28 @@
+html {
+    font-size: var(--font-size-desktop);
+    font-family: 'NunitoSans', sans-serif;
+    
+    @include laptop { font-size: var(--font-size-laptop); }
+    @include tablet { font-size: var(--font-size-tablet); }
+    @include phone { font-size: var(--font-size-phone); }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-action-500);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.83rem; }
+h6 { font-size: 0.67rem; }

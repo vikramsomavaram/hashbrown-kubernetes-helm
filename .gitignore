@@ -1,0 +1,30 @@
+# Development files
+*.swp
+*.swo
+.idea
+/node_modules/*
+/npm-debug.log
+/package-lock.json
+.sass-cache/*
+/docker/db/*
+/docker/remote
+/docker/.env
+
+# Storage directories
+/storage/*
+
+# Config directories
+/config/*
+
+# Plugin directories
+/plugins/*
+
+# Generated files
+/public/css/*
+!/public/css/theme.css
+/public/js/*
+!/public/js/login.js
+!/public/js/setup.js
+!/public/js/test.js
+!/public/js/browser-check.js
+/tmp/*

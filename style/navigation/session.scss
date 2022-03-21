@@ -1,0 +1,11 @@
+.navigation--session {
+    position: fixed;
+    top: var(--padding-medium);
+    right: var(--padding-medium);
+    display: flex;
+    z-index: 200;
+
+    .widget {
+        margin-left: 0.5rem;
+    }
+}

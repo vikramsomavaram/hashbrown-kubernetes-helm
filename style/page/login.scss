@@ -1,0 +1,45 @@
+.page--login {
+    background-color: var(--color-decor-500);
+    color: var(--color-decor-text);
+
+    &__login {
+        width: 20rem;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+
+        .widget {
+            margin-bottom: 1rem;
+        }
+
+        &__branding {
+            margin: 0 auto calc(var(--padding-large) + var(--padding-medium)) auto;
+            position: relative;
+            width: 16rem;
+            padding-left: 4rem;
+            text-align: left;
+
+            svg {
+                display: block;
+                fill: var(--color-action-500);
+                width: var(--size-widget-medium);
+                height: var(--size-widget-medium);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            
+            h1 {
+                color: var(--color-default);
+                white-space: nowrap;
+            }
+        }
+
+        &__persist {
+            text-align: left;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

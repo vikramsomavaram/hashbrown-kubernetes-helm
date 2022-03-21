@@ -1,0 +1,50 @@
+.list-item--project {
+    padding: var(--padding-medium);
+    position: relative;
+    color: var(--color-default-text);
+    background-color: var(--color-default);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-small);
+    
+    &.loading {
+        @include spinner;
+    }
+    
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+        
+    &__info {
+        flex-grow: 1;
+
+        &__name {
+            margin: 0;
+        }
+
+        &__icon {
+            margin-right: var(--padding-small);
+
+            &:not(:first-child) {
+                margin-left: var(--padding-medium);
+            }
+        }
+    }   
+
+    &__environment {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: var(--padding-medium);
+        }
+    }
+
+    .widget--popup[role="item-menu"] {
+        position: absolute;
+        top: var(--padding-small);
+        right: var(--padding-small);
+    }
+}

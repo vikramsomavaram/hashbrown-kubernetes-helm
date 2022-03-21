@@ -1,0 +1,12 @@
+grafana:
+  enabled: true
+  
+loki-stack:
+  enabled: true
+
+prometheus:
+  enabled: true
+      
+
+
+

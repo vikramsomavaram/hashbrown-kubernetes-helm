@@ -1,0 +1,232 @@
+.page--dashboard {
+    // Header
+    &__header {
+        background-color: var(--color-decor-500);
+        color: var(--color-decor-text);
+        padding: 7rem 0 0 0;
+        display: flex;
+        justify-content: center;
+
+        // Actions
+        &__actions {
+            display: flex;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+
+            .widget {
+                margin-left: 0.5rem;
+            }
+        }
+            
+        // Tab
+        &__tab {
+            text-decoration: none;
+            padding: 0 2rem;
+            border-top-left-radius: var(--border-radius-small);
+            border-top-right-radius: var(--border-radius-small);
+            display: inline-block;
+            height: var(--size-widget-medium);
+            line-height: var(--size-widget-medium);
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 0;
+            background-color: transparent;
+            color: var(--color-decor-text);
+            background-color: var(--color-decor-600);
+            margin-right: 0.5rem;
+
+            &:hover {
+                color: var(--color-action-text);
+                background-color: var(--color-action-500);
+                text-decoration: none;
+            }
+
+            &.active {
+                pointer-events: none;
+                color: var(--color-default-text);
+                background-color: var(--color-default-100);
+            }
+        }
+
+        // Logo
+        &__logo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            padding: var(--padding-medium);
+            transform: translateX(-50%);
+            width: 16rem;
+            padding-left: 4rem;
+            text-align: left;
+
+            svg {
+                display: block;
+                fill: var(--color-action-500);
+                width: var(--size-widget-medium);
+                height: var(--size-widget-medium);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            
+            h1 {
+                color: var(--color-default);
+                white-space: nowrap;
+            }
+        }
+    }
+
+    // Body
+    &__body {
+        width: 100%;
+        padding-top: 4rem;
+        height: calc(100% - 4rem);
+        overflow-y: auto;
+        margin: 0;
+
+        &__container {
+            width: calc(100% - 2rem);
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+    }
+
+    // Server
+    &__server {
+        &__info {
+            width: 100%;
+            max-width: 40rem;
+            margin: 0 auto var(--padding-large) auto;
+            padding: var(--padding-medium);
+            border-radius: var(--border-radius-small);
+            background-color: var(--color-default);
+            box-shadow: var(--box-shadow);
+
+            tbody {
+                line-height: 2;
+
+                td:first-child {
+                    padding-right: var(--padding-large);
+                }
+            }
+
+            &__heading {
+                margin-top: 0;
+            }
+
+            &__plugin {
+                background-color: var(--color-default-200);
+                border-radius: var(--border-radius-small);
+                padding: var(--padding-medium);
+                position: relative;
+
+                .fa {
+                    margin-right: var(--padding-small);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: var(--padding-medium);
+                }
+
+                &__author {
+                    color: var(--color-default-400);
+                }
+
+                &__name {
+                    margin: 0;
+                }
+
+                &__version {
+                    color: var(--color-default-300);
+                    margin-left: var(--padding-small);
+                }
+
+                &__description {
+                    margin-bottom: 0; 
+                }
+            }
+        }
+    }
+
+    // Frontend test
+    &__frontend-test {
+        &__check {
+            position: relative;
+            line-height: 2rem;
+            padding-bottom: 0.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid var(--color-default-200);
+
+            }
+
+            ul {
+                border-top: 1px solid var(--color-default-200);
+                padding-top: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            &__checkbox {
+                position: absolute !important;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    
+    // Backend test
+    &__backend-test {
+        &__messages {
+            color: var(--color-decor-text);
+            background-color: var(--color-decor-600);
+            border-radius: var(--border-radius-small);
+            padding: var(--padding-medium);
+            margin: 0 0 var(--padding-large) 0;
+        }
+    }
+
+    // List views
+    &__projects,
+    &__users {
+        &__list { 
+            &.single {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                > .widget--button {
+                    margin-top: var(--padding-medium);
+                }
+
+                > .list-item--project, > .placeholder, > .widget--button {
+                    width: 100%;
+                    max-width: 30rem;
+                
+                    @include phone {
+                        min-width: 100%;
+                    }
+                }
+            }
+
+            // The element that is placed while waiting for the view to be fetched
+            .placeholder {
+                padding: 1rem;
+                position: relative;
+                color: var(--color-default-text);
+                background-color: var(--color-default);
+                box-shadow: var(--box-shadow);
+                min-height: 12rem;
+                
+                @include spinner;
+            }
+        }
+
+        &__add {
+            height: auto !important;
+        }
+    }
+}

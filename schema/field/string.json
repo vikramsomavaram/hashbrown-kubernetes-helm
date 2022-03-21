@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "StringEditor",
+    "customIcon": "font",
+    "name": "String"
+}

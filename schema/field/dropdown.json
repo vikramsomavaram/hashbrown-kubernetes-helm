@@ -1,0 +1,6 @@
+{
+    "parentId": "fieldBase",
+    "editorId": "DropdownEditor",
+    "customIcon": "list-alt",
+    "name": "Dropdown"
+}

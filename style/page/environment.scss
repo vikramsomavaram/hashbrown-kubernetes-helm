@@ -1,0 +1,85 @@
+/**
+ * Environment page style
+ */
+.page--environment {
+    &__spaces {
+        display: flex;
+        height: 100%;
+        transition: opacity 0.5s ease;
+        opacity: 1;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__space {
+        position: relative;
+
+        &--nav {
+            flex-shrink: 0;
+            height: 100%;
+            
+            @include tablet {
+                body.welcome & {
+                    flex-grow: 1;
+                }
+            }
+
+            @include phone {
+                position: absolute;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                transition: transform 0.5s ease;
+                transform: translateX(-100%);
+
+                &__toggle:checked ~ & {
+                    transform: none;
+                    box-shadow: var(--box-shadow);
+                }
+                
+                &__toggle:checked ~ &__switch::after {
+                    content: '\f00d';
+                }
+            }
+
+            &__toggle {
+                display: none;
+            }
+
+            &__switch {
+                position: absolute;
+                display: none;
+                left: var(--padding-medium);
+                bottom: var(--padding-medium);
+                width: var(--size-widget-medium);
+                line-height: var(--size-widget-medium);
+                cursor: pointer;
+                text-align: center;
+                z-index: 1100;
+                color: var(--color-action-text);
+                border-radius: var(--border-radius-small);
+                background-color: var(--color-action-500);
+
+                &::after {
+                    font-family: 'FontAwesome';
+                    content: '\f0c9';
+                }
+
+                @include phone {
+                    display: block;
+                }
+            }
+        }
+
+        &--editor {
+            flex-grow: 1;
+            height: 100%;
+
+            @include tablet {
+                body.welcome & {
+                    display: none;
+                }
+            }
+        }
+    }
+}
